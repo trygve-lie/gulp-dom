@@ -8,7 +8,7 @@ operations on any inbound HTML.
 
 
 
-## Installation
+## <a name='installation'>Installation</a>
 
 ```bash
 $ npm install gulp-dom
@@ -16,7 +16,7 @@ $ npm install gulp-dom
 
 
 
-## Basic example
+## <a name='basic_example'>Basic example</a>
 
 Example on adding a `data` attribute with a version number on the `body` tag of 
 a HTML document:
@@ -28,8 +28,7 @@ var gulp = require('gulp'),
 gulp.task('html', function() {
     return gulp.src('./src/index.html')
         .pipe(dom(function(){
-            this.querySelectorAll('body')[0].setAttribute('data-version', '1.0');
-            return this;
+            return this.querySelectorAll('body')[0].setAttribute('data-version', '1.0');
         }))
         .pipe(gulp.dest('./public/'));
 });
@@ -37,12 +36,14 @@ gulp.task('html', function() {
 
 
 
-## Usage
+## <a name='usage'>Usage</a>
 
 The plugin has only one method which takes two attributes:
 
 
-### mutator
+### <a name='mutator'>mutator</a>
+
+Type: `function`
 
 The first attribute is required and is a mutator function. This is where you put
 the code which you want to run and manipulate the HTML.
@@ -53,31 +54,96 @@ document is then set as `this` on the mutator function.
 A value must be returned by the mutator function and it is this returned value 
 which will be passed on to the next step in the gulp chain.
 
-Example mutator function:
+Example of basic mutator function:
 
 ```js
 dom(function(){
-	// 'this' holds the DOM and we can something on it
-	this.getElementById('foo').setAttribute('class', 'bar');
+    // 'this' holds the DOM and we can something on it
+    this.getElementById('foo').setAttribute('class', 'bar');
 
-	// return the DOM so it can be passed on to the next gulp step
-	return this;
+    // return the DOM so it can be passed on to the next gulp step
+    return this;
 });
 ```
 
 By default it is expected that the mutator function returns a DOM document, but 
-any `String` value can be returned.
+any `String` value can be returned. If the default is being used, the returned
+DOM document will be serialized into a HTML document.
+
+If the mutator function shall return something else than a DOM document its
+important that serialization is turned off. Please see the 
+[serialize attribute](#serialize) for further information.
 
 
-### serialize
+
+### <a name='serialize'>serialize</a>
+
+Type: `Boolean`
+
+By default the pugin assume that the returned value form the mutator function
+is a DOM document and will then serialize the value into HTML document.
+
+This attribute turns this serialization on and off. By providing no value or
+`true` the returned value of the mutator function will be serialized. By
+providing `false` the returned value of the mutator function will not be
+serialized.
+
+If the returned value of the mutator function is a `String` this values should
+be set to `false`.
+
+Example of mutator function which returns the content of a inline script tag as
+a `String`:
+
+```js
+dom(function(){
+    return this.querySelectorAll('script:not([src])')[0].innerHTML;
+}, false)
+```
 
 
 
+## <a name='jsdom'>A note on jsdom</a>
 
-## Tests
+This plugin wraps [jsdom](https://github.com/tmpvar/jsdom). Though, this plugin
+does not enable all features provided by jsdom. The sole purpose for jsdom in 
+this plugin is to parse a HTML document into a DOM so we can run operations on
+it.
+
+Features such as injecting scripts into the DOM which jsdom can do is not 
+enabled in this plugin.
+
+
+
+## <a name='tests'>Tests</a>
 
 ```bash
 $ npm test
 ````
 
 Tests are written in [mocha](http://visionmedia.github.io/mocha/).
+
+
+
+## <a name='license'>License</a> 
+
+The MIT License (MIT)
+
+Copyright (c) 2014 - Trygve Lie post@trygve-lie.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
