@@ -8,15 +8,15 @@ operations on any inbound HTML.
 
 
 
-## <a name='installation'>Installation</a>
+## Installation
 
 ```bash
 $ npm install gulp-dom
-````
+```
 
 
 
-## <a name='basic_example'>Basic example</a>
+## Basic example
 
 Example on adding a `data` attribute with a version number on the `body` tag of 
 a HTML document:
@@ -36,12 +36,12 @@ gulp.task('html', function() {
 
 
 
-## <a name='usage'>Usage</a>
+## Usage
 
 The plugin has only one method which takes two attributes:
 
 
-### <a name='mutator'>mutator</a>
+### mutator
 
 Type: `function`
 
@@ -76,7 +76,7 @@ important that serialization is turned off. Please see the
 
 
 
-### <a name='serialize'>serialize</a>
+### serialize
 
 Type: `Boolean`
 
@@ -102,7 +102,7 @@ dom(function(){
 
 
 
-## <a name='jsdom'>A note on jsdom</a>
+## A note on jsdom
 
 This plugin wraps [jsdom](https://github.com/tmpvar/jsdom). Though, this plugin
 does not enable all features provided by jsdom. The sole purpose for jsdom in 
@@ -114,17 +114,17 @@ enabled in this plugin.
 
 
 
-## <a name='tests'>Tests</a>
+## Tests
 
 ```bash
 $ npm test
-````
+```
 
 Tests are written in [mocha](http://visionmedia.github.io/mocha/).
 
 
 
-## <a name='license'>License</a> 
+## License 
 
 The MIT License (MIT)
 
