@@ -24,7 +24,8 @@
   "devDependencies": {
     "jshint": "latest",
     "mocha": "latest",
-    "chai": "latest"
+    "chai": "latest",
+    "gulp": "latest"
   },
   "dependencies": {
     "jsdom": "1.0.x",
