@@ -10,25 +10,43 @@ var mocha           = require('mocha'),
 
 
 
+describe('gulp-dom()', function(){
 
-describe('foo', function(){
+    describe('error handling', function(){
 
-    describe('bar', function(){
+        it('should pass file when it isNull()', function(done) {
+            var stream      = dom(),
+                mockFile    = {
+                isNull: function() { 
+                    return true; 
+                }
+            };
 
-        it('xyz', function(done){
-            var result = '<section id="root"></section>';
-
-            jsdom.env('<section id="root"></section>', function(error, window){
-                var doc         = window.document,
-                    root        = doc.getElementById('root'),
-                    elements    = [];
-
-                utils.appendMultipleChildElements(root, elements);
-
-                assert.equal(result, root.outerHTML);
+            stream.on('data', function(data) {
+                assert.equal(data, mockFile);
                 done();
             });
 
+            stream.write(mockFile);
+        });
+
+        it('should emit error when file isStream()', function (done) {
+            var stream      = dom(),
+                mockFile    = {
+                    isNull: function () { 
+                        return false; 
+                    },
+                    isStream: function () { 
+                        return true; 
+                    }
+                };
+            
+            stream.on('error', function (err) {
+                assert.equal(err.message, 'Streaming not supported');
+                done();
+            });
+        
+            stream.write(mockFile);
         });
 
     });
