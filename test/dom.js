@@ -7,7 +7,7 @@ var mocha           = require('mocha'),
     assert          = require('chai').assert,
     utils           = require('gulp-util'),
     jsdom           = require('jsdom'),
-    dom           	= require('../');
+    dom             = require('../');
 
 
 
