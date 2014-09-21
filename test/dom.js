@@ -5,8 +5,20 @@
 
 var mocha           = require('mocha'),
     assert          = require('chai').assert,
+    utils           = require('gulp-util'),
     jsdom           = require('jsdom'),
     dom           	= require('../');
+
+
+
+function createFixture(markup) {
+    return new utils.File({
+        cwd: './',
+        base: './',
+        path: './',
+        contents: new Buffer(markup)
+    });
+}
 
 
 
@@ -15,8 +27,8 @@ describe('gulp-dom()', function(){
     describe('error handling', function(){
 
         it('should pass file when it isNull()', function(done) {
-            var stream      = dom(),
-                mockFile    = {
+            var stream = dom();
+            var mockFile = {
                 isNull: function() { 
                     return true; 
                 }
@@ -31,8 +43,8 @@ describe('gulp-dom()', function(){
         });
 
         it('should emit error when file isStream()', function (done) {
-            var stream      = dom(),
-                mockFile    = {
+            var stream  = dom();
+            var mockFile = {
                     isNull: function () { 
                         return false; 
                     },
@@ -47,6 +59,28 @@ describe('gulp-dom()', function(){
             });
         
             stream.write(mockFile);
+        });
+
+    });
+
+
+
+    describe('parsing', function(){
+
+        it('should manipulate document', function (done) {
+            var result = '<html><head></head><body><p id="test">foo</p></body></html>';
+            var fixture = createFixture('<html><body><p id="test">test</p></body></html>');
+            var stream = dom(function(){
+                this.getElementById('test').innerHTML = 'foo';
+                return this;
+            });
+
+            stream.on('data', function (data) {
+                assert.equal(data.contents.toString("utf8"), result);
+                done();
+            });
+
+            stream.write(fixture);
         });
 
     });

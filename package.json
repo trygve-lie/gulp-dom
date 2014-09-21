@@ -24,6 +24,9 @@
   "devDependencies": {
     "jshint": "latest",
     "mocha": "latest",
+    "request": "latest",
+    "vinyl-source-stream": "latest",
+    "vinyl-buffer": "latest",
     "chai": "latest",
     "gulp": "latest"
   },
