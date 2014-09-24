@@ -1,10 +1,19 @@
 # gulp-dom
 
-Gulp plugin for general DOM manipulation.
+Gulp plugin for generic DOM manipulation.
 
 This [Gulp](http://gulpjs.com/) plugin is a simple wrapper around 
 [jsdom](https://github.com/tmpvar/jsdom) making it possible to run DOM 
 operations on any inbound HTML.
+
+This can be used for several things in a build process. Some examples:
+
+* [Append a version number](https://github.com/trygve-lie/gulp-dom/tree/master/examples/append-version) or any other "stamp data" to the document on build time.
+* [Extract inline scripts / css](https://github.com/trygve-lie/gulp-dom/tree/master/examples/extract-inline-scripts) and put them in a separate file.
+* [Fix unvalid markup.](https://github.com/trygve-lie/gulp-dom/tree/master/examples/fix-unvalid-markup)
+* [Remove whitespace](https://github.com/trygve-lie/gulp-dom/tree/master/examples/remove-whitespace) in the document in a safe way.
+* [Replace script / css references](https://github.com/trygve-lie/gulp-dom/tree/master/examples/replace-script-tags) with a new reference (to ex a minified version).
+* [Web scraping.](https://github.com/trygve-lie/gulp-dom/tree/master/examples/web-scrape) Take a document from a URL and transform it or extract parts of it during build.
 
 
 
