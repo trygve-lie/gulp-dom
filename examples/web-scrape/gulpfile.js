@@ -13,7 +13,7 @@ var request     = require('request'),
 // Gulp task for web scraping
 
 gulp.task('web-scrape', function() {
-    return request('http://localhost:8100')
+    return request('http://nodejs.org/')
         .pipe(source('example.txt'))
         .pipe(buffer())
         .pipe(dom(function(){
