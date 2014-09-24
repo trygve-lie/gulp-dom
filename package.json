@@ -27,6 +27,7 @@
     "jshint": "latest",
     "mocha": "latest",
     "request": "latest",
+    "dom-whitespace": "latest",
     "vinyl-source-stream": "latest",
     "vinyl-buffer": "latest",
     "chai": "latest",
