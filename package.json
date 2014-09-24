@@ -16,6 +16,8 @@
   },
   "keywords": [
     "gulpplugin",
+    "gulp",
+    "jsdom",
     "dom",
     "html"
   ],
