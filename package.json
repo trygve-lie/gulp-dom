@@ -34,7 +34,7 @@
     "gulp": "latest"
   },
   "dependencies": {
-    "jsdom": "1.0.x",
+    "jsdom": "1.0.2",
     "gulp-util" : "3.0.x",
     "through2" : "0.6.x"
   }
