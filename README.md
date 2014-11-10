@@ -1,5 +1,7 @@
 # gulp-dom
 
+[![Version npm](http://img.shields.io/npm/v/gulp-dom.svg?style=flat-square)](http://browsenpm.org/package/gulp-dom)[![Dependencies](https://img.shields.io/david/trygve-lie/gulp-dom.svg?style=flat-square)](https://david-dm.org/trygve-lie/gulp-dom)
+
 Gulp plugin for generic DOM manipulation.
 
 This [Gulp](http://gulpjs.com/) plugin is a simple wrapper around 
