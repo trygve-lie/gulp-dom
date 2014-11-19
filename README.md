@@ -1,5 +1,7 @@
 # gulp-dom
 
+[![Dependencies](https://img.shields.io/david/trygve-lie/gulp-dom.svg?style=flat-square)](https://david-dm.org/trygve-lie/gulp-dom)
+
 Gulp plugin for generic DOM manipulation.
 
 This [Gulp](http://gulpjs.com/) plugin is a simple wrapper around 
@@ -137,7 +139,7 @@ Tests are written in [mocha](http://visionmedia.github.io/mocha/).
 
 The MIT License (MIT)
 
-Copyright (c) 2014 - Trygve Lie post@trygve-lie.com
+Copyright (c) 2014 - Trygve Lie - post@trygve-lie.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
