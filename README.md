@@ -1,6 +1,6 @@
 # gulp-dom
 
-[![Dependencies](https://img.shields.io/david/trygve-lie/gulp-dom.svg?style=flat-square)](https://david-dm.org/trygve-lie/gulp-dom)
+[![Dependencies](https://img.shields.io/david/trygve-lie/gulp-dom.svg?style=flat-square)](https://david-dm.org/trygve-lie/gulp-dom)[![Build Status](http://img.shields.io/travis/trygve-lie/gulp-dom/master.svg?style=flat-square)](https://travis-ci.org/trygve-lie/gulp-dom)
 
 Gulp plugin for generic DOM manipulation.
 
