@@ -1,6 +1,6 @@
 {
   "name": "gulp-dom",
-  "version": "0.5.7",
+  "version": "0.6.0",
   "description": "Gulp plugin for generic DOM manipulation",
   "main": "lib/dom.js",
   "repository": {
@@ -34,7 +34,7 @@
     "gulp": "latest"
   },
   "dependencies": {
-    "jsdom": "5.6.x",
+    "jsdom": "6.0.x",
     "gulp-util" : "3.0.x",
     "through2" : "2.x"
   }

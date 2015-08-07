@@ -28,13 +28,18 @@ $ npm install gulp-dom
 
 ### Note
 
+[Jsdom version 6.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#600) 
+require io.js version 2.0.0 or newer. Version 0.6.0 of this
+plugin depend on [jsdom version 6.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#600) 
+and therefor require io.js version 2.0.0 or newer.
+
 [Jsdom version 4.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#400) 
-no longer works with Node.js™, and instead requires io.js. Version 0.4.0 of this
+does not support Node.js™ and requires io.js. Version 0.4.0 of this
 plugin depend on [jsdom version 4.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#400) 
 and therefor require io.js.
 
 For a working version of this plugin which works with Node.js™, please use
-version 0.3.x.
+version 0.3.x or older.
 
 
 
