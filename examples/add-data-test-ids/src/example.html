@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example of replacing scripts</title>
+        <script>
+            var info = 'I am inline, do not mangle me';
+        </script>
+    </head>
+    <body>
+        <div ng-repeat="item in items" >Repeat this!</div>
+        <form>
+            <input type="text"></input>
+            <select>
+                <option>one</option>
+                <option>two</option>
+                <option>three</option>
+            </select>
+            <button type="submit"></button>
+        </form>
+        <h1>Example of replacing scripts</h1>
+        <script src="js/bar.js"></script>
+        <script src="js/foo.js"></script>
+        <script src="js/xyz.js"></script>
+    </body>
+</html>
