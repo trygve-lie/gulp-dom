@@ -30,12 +30,12 @@
     "dom-whitespace": "latest",
     "vinyl-source-stream": "latest",
     "vinyl-buffer": "latest",
-    "chai": "latest",
+    "chai": "3.3.0",
     "gulp": "latest"
   },
   "dependencies": {
     "jsdom": "6.5.x",
-    "gulp-util" : "3.0.x",
-    "through2" : "2.x"
+    "gulp-util": "3.0.x",
+    "through2": "2.x"
   }
 }
