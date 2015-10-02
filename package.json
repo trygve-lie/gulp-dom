@@ -31,11 +31,11 @@
     "vinyl-source-stream": "latest",
     "vinyl-buffer": "latest",
     "chai": "latest",
-    "gulp": "latest"
+    "gulp": "3.9.0"
   },
   "dependencies": {
     "jsdom": "6.5.x",
-    "gulp-util" : "3.0.x",
-    "through2" : "2.x"
+    "gulp-util": "3.0.x",
+    "through2": "2.x"
   }
 }
