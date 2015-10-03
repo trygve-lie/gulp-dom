@@ -24,18 +24,18 @@
   "author": "Trygve Lie <github@trygve-lie.com>",
   "license": "MIT",
   "devDependencies": {
-    "jshint": "latest",
-    "mocha": "latest",
-    "request": "latest",
-    "dom-whitespace": "latest",
-    "vinyl-source-stream": "latest",
-    "vinyl-buffer": "latest",
-    "chai": "latest",
-    "gulp": "latest"
+    "jshint": "2.8.0",
+    "mocha": "2.3.3",
+    "request": "2.64.0",
+    "dom-whitespace": "0.1.2",
+    "vinyl-source-stream": "1.1.0",
+    "vinyl-buffer": "1.0.0",
+    "chai": "3.3.0",
+    "gulp": "3.9.0"
   },
   "dependencies": {
-    "jsdom": "6.5.x",
-    "gulp-util" : "3.0.x",
-    "through2" : "2.x"
+    "jsdom": "6.5.1",
+    "gulp-util": "3.0.6",
+    "through2": "2.0.0"
   }
 }
