@@ -26,7 +26,7 @@
   "devDependencies": {
     "jshint": "2.8.0",
     "mocha": "2.3.3",
-    "request": "2.65.0",
+    "request": "2.66.0",
     "dom-whitespace": "0.1.2",
     "vinyl-source-stream": "1.1.0",
     "vinyl-buffer": "1.0.0",
