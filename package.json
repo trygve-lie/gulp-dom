@@ -30,7 +30,7 @@
     "dom-whitespace": "0.1.2",
     "vinyl-source-stream": "1.1.0",
     "vinyl-buffer": "1.0.0",
-    "chai": "3.4.1",
+    "chai": "3.5.0",
     "gulp": "3.9.0"
   },
   "dependencies": {
