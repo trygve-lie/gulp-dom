@@ -1,6 +1,6 @@
 {
   "name": "gulp-dom",
-  "version": "0.8.0",
+  "version": "0.8.3",
   "description": "Gulp plugin for generic DOM manipulation",
   "main": "lib/dom.js",
   "repository": {
@@ -24,9 +24,9 @@
   "author": "Trygve Lie <github@trygve-lie.com>",
   "license": "MIT",
   "devDependencies": {
-    "jshint": "2.9.1",
+    "jshint": "2.9.2",
     "mocha": "2.4.5",
-    "request": "2.69.0",
+    "request": "2.72.0",
     "dom-whitespace": "0.1.2",
     "vinyl-source-stream": "1.1.0",
     "vinyl-buffer": "1.0.0",
