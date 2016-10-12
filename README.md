@@ -78,16 +78,23 @@ the code which you want to run and manipulate the HTML.
 The plugin will take the provided HTML and parse it into a DOM document. The DOM 
 document is then set as `this` on the mutator function.
 
+The first parameter to the mutator function is the file itself.
+
 A value must be returned by the mutator function and it is this returned value 
 which will be passed on to the next step in the gulp chain.
 
 Example of basic mutator function:
 
 ```js
-dom(function(){
+dom(function(file){
     // 'this' holds the DOM and we can something on it
     this.getElementById('foo').setAttribute('class', 'bar');
 
+    // file is the file object for the DOM
+    if (file.path === 'index.html') {
+      // do something special
+    }
+    
     // return the DOM so it can be passed on to the next gulp step
     return this;
 });
