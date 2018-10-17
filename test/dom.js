@@ -5,7 +5,7 @@
 
 var mocha           = require('mocha'),
     assert          = require('chai').assert,
-    vinyl           = require('vinyl'),
+    Vinyl           = require('vinyl'),
     jsdom           = require('jsdom'),
     dom             = require('../');
 
