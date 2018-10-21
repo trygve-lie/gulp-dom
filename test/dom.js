@@ -3,10 +3,8 @@
 
 "use strict";
 
-var mocha           = require('mocha'),
-    assert          = require('chai').assert,
+var assert          = require('chai').assert,
     Vinyl           = require('vinyl'),
-    jsdom           = require('jsdom'),
     dom             = require('../');
 
 
