@@ -147,7 +147,7 @@ enabled in this plugin.
 $ npm test
 ```
 
-Tests are written in [mocha](http://visionmedia.github.io/mocha/).
+Tests are written in [mocha](http://mochajs.org/).
 
 
 
