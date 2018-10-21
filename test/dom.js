@@ -16,7 +16,7 @@ function createFixture(markup) {
         cwd: './',
         base: './',
         path: './',
-        contents: new Buffer(markup)
+        contents: Buffer.from(markup)
     });
 }
 
@@ -29,8 +29,8 @@ describe('gulp-dom()', function(){
         it('should pass file when it isNull()', function(done) {
             var stream = dom();
             var mockFile = {
-                isNull: function() { 
-                    return true; 
+                isNull: function() {
+                    return true;
                 }
             };
 
@@ -45,19 +45,19 @@ describe('gulp-dom()', function(){
         it('should emit error when file isStream()', function (done) {
             var stream  = dom();
             var mockFile = {
-                    isNull: function () { 
-                        return false; 
+                    isNull: function () {
+                        return false;
                     },
-                    isStream: function () { 
-                        return true; 
+                    isStream: function () {
+                        return true;
                     }
                 };
-            
+
             stream.on('error', function (err) {
                 assert.equal(err.message, 'Streaming not supported');
                 done();
             });
-        
+
             stream.write(mockFile);
         });
 
