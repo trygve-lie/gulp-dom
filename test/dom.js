@@ -5,14 +5,14 @@
 
 var mocha           = require('mocha'),
     assert          = require('chai').assert,
-    utils           = require('gulp-util'),
+    Vinyl           = require('vinyl'),
     jsdom           = require('jsdom'),
     dom             = require('../');
 
 
 
 function createFixture(markup) {
-    return new utils.File({
+    return new Vinyl({
         cwd: './',
         base: './',
         path: './',
