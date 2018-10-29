@@ -4,8 +4,8 @@
 
 Gulp plugin for generic DOM manipulation.
 
-This [Gulp](http://gulpjs.com/) plugin is a simple wrapper around 
-[jsdom](https://github.com/tmpvar/jsdom) making it possible to run DOM 
+This [Gulp](http://gulpjs.com/) plugin is a simple wrapper around
+[jsdom](https://github.com/tmpvar/jsdom) making it possible to run DOM
 operations on any inbound HTML.
 
 This can be used for several things in a build process. Some examples:
@@ -18,7 +18,6 @@ This can be used for several things in a build process. Some examples:
 * [Web scraping.](https://github.com/trygve-lie/gulp-dom/tree/master/examples/web-scrape) Take a document from a URL and transform it or extract parts of it during build.
 
 
-
 ## Installation
 
 ```bash
@@ -26,26 +25,9 @@ $ npm install gulp-dom
 ```
 
 
-### Note
-
-[Jsdom version 6.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#600) 
-require io.js version 2.0.0 or newer. Version 0.6.0 of this
-plugin depend on [jsdom version 6.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#600) 
-and therefor require io.js version 2.0.0 or newer.
-
-[Jsdom version 4.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#400) 
-does not support Node.js™ and requires io.js. Version 0.4.0 of this
-plugin depend on [jsdom version 4.0.0](https://github.com/tmpvar/jsdom/blob/master/Changelog.md#400) 
-and therefor require io.js.
-
-For a working version of this plugin which works with Node.js™, please use
-version 0.3.x or older.
-
-
-
 ## Basic example
 
-Example on adding a `data` attribute with a version number on the `body` tag of 
+Example on adding a `data` attribute with a version number on the `body` tag of
 a HTML document:
 
 ```js
@@ -62,7 +44,6 @@ gulp.task('html', function() {
 ```
 
 
-
 ## Usage
 
 The plugin has only one method which takes two attributes:
@@ -75,10 +56,10 @@ Type: `function`
 The first attribute is required and is a mutator function. This is where you put
 the code which you want to run and manipulate the HTML.
 
-The plugin will take the provided HTML and parse it into a DOM document. The DOM 
+The plugin will take the provided HTML and parse it into a DOM document. The DOM
 document is then set as `this` on the mutator function.
 
-A value must be returned by the mutator function and it is this returned value 
+A value must be returned by the mutator function and it is this returned value
 which will be passed on to the next step in the gulp chain.
 
 Example of basic mutator function:
@@ -93,14 +74,13 @@ dom(function(){
 });
 ```
 
-By default it is expected that the mutator function returns a DOM document, but 
+By default it is expected that the mutator function returns a DOM document, but
 any `String` value can be returned. If the default is being used, the returned
 DOM document will be serialized into a HTML document.
 
 If the mutator function shall return something else than a DOM document its
-important that serialization is turned off. Please see the 
+important that serialization is turned off. Please see the
 [serialize attribute](#serialize) for further information.
-
 
 
 ### serialize
@@ -128,17 +108,15 @@ dom(function(){
 ```
 
 
-
 ## A note on jsdom
 
 This plugin wraps [jsdom](https://github.com/tmpvar/jsdom). Though, this plugin
-does not enable all features provided by jsdom. The sole purpose for jsdom in 
+does not enable all features provided by jsdom. The sole purpose for jsdom in
 this plugin is to parse a HTML document into a DOM so we can run operations on
 it.
 
-Features such as injecting scripts into the DOM which jsdom can do is not 
+Features such as injecting scripts into the DOM which jsdom can do is not
 enabled in this plugin.
-
 
 
 ## Tests
@@ -147,11 +125,10 @@ enabled in this plugin.
 $ npm test
 ```
 
-Tests are written in [mocha](http://visionmedia.github.io/mocha/).
+Tests are written in [mocha](http://mochajs.org/).
 
 
-
-## License 
+## License
 
 The MIT License (MIT)
 
