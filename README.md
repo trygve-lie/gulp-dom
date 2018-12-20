@@ -16,6 +16,7 @@ This can be used for several things in a build process. Some examples:
 * [Remove whitespace](https://github.com/trygve-lie/gulp-dom/tree/master/examples/remove-whitespace) in the document in a safe way.
 * [Replace script / css references](https://github.com/trygve-lie/gulp-dom/tree/master/examples/replace-script-tags) with a new reference (to ex a minified version).
 * [Web scraping.](https://github.com/trygve-lie/gulp-dom/tree/master/examples/web-scrape) Take a document from a URL and transform it or extract parts of it during build.
+* [Make external links target _blank](https://github.com/trygve-lie/gulp-dom/tree/master/examples/external-links-target-blank)
 
 
 ## Installation
